@@ -1,0 +1,197 @@
+// base & variables
+@import 'base/type';
+@import 'base/variables';
+@import 'base/base';
+
+// layout
+@import 'layout/breakpoints';
+@import 'layout/grid';
+
+// colors
+@import 'themes/colors';
+
+// components
+@import 'components/navbar';
+@import 'components/card';
+@import 'components/avatar';
+@import 'components/list';
+@import 'components/button';
+@import 'components/modal';
+@import 'components/toast';
+@import 'components/forms';
+
+// utilities
+@import 'base/utilities';
+@import 'layout/utility-layout';
+
+// changes & additions
+
+.sidebar, .sidebar-toggled {
+    // background: $emerald;           // edit your sidebar color here
+    background: #005ac1;
+    span {
+        transition: $base-easing;
+        &:hover {
+            color: #1D1D1D;
+        }
+    }
+}
+
+.active {
+    color: #005ac1;
+}
+
+.nav-content {
+    backdrop-filter: blur(12px);    //optional
+}
+
+.container {
+    width: 100%;
+    max-width: 92%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    z-index: -2;
+}
+
+.lottie-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.form-border-right {
+    border-right: 1px solid #EDEDED;
+    padding-right: 100px;
+}
+
+.main-content {
+    opacity: 1;
+    transition: $base-easing;
+    -webkit-transition: all 1s cubic-bezier(0.77,0,0.18,1);
+}
+
+.main-content-off {
+    opacity: 0.1;
+    transition: $base-easing;
+    -webkit-transition: all 1s cubic-bezier(0.77,0,0.18,1);
+    pointer-events: none;
+}
+
+// thumbnails
+
+.thumb-cover {
+    cursor: pointer;
+    transition: $base-easing;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.svg {
+    width: 2.441rem;
+}
+
+.inv-btn {
+    background: none;
+    text-decoration: none;
+    padding: none;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    transition: $base-easing;
+    background: none;
+    &:hover {
+        background: #242424;
+    }
+}
+
+.player-bg {
+    background: rgb(26,46,59);
+    background: linear-gradient(180deg, rgba(26,46,59,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.vimeo-container {
+    width: 100%;
+    max-width: 1152px;
+}
+
+.vimeo-player {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    iframe {
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+}
+
+.work-container {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    z-index: -2;
+}
+
+// custom component
+
+@mixin new-modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: all .640s cubic-bezier(0.77,0,0.18,1);
+    -webkit-transition: all .640s cubic-bezier(0.77,0,0.18,1);
+    z-index: 1;
+    width: 100%;
+    overflow: auto;
+}
+
+.new-modal {
+    @include new-modal();
+    opacity: 100%;
+    transform: translate(-50%, -50%);
+    .new-modal-content {
+        margin: auto;
+        padding: 20px;
+        width: 60%;
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
+}
+
+.new-modal-hidden {
+    @include new-modal();
+    opacity: 0%;
+    transform: translate(-50%, -20%);
+    .new-modal-content {
+        margin: auto;
+        padding: 20px;
+        width: 60%;
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
+}
+
+// custom breakpoints
+
+@media (max-width: 1024px) {
+    .form-border-right {
+        border: none;
+        padding-right: 0;
+    }
+}
