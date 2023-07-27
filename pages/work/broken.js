@@ -52,7 +52,7 @@ const Broken = () => {
                 </div>
                 <div className='work-container pb-4'>
                     <p className='custom-text font-xl font-f-code text-uppercase mt-6'>who am I?</p>
-                    <p className='custom-text font-lg mt-2'>{`Noah here. An 18-year-old motion, graphic, and web designer. I like perfecting things by devoting more time to them.`}</p>
+                    <p className='custom-text font-lg mt-2'>{`Karthikeyan here. An 18-year-old motion, graphic, and web designer. I like perfecting things by devoting more time to them.`}</p>
                     <div className='mt-4'>
                         <p className='custom-text font-lg font-f-code'>{`I basically love the idea of a consistent system and a sense of control. This is one of the reasons why I took branding a little bit seriously.`}</p>
                         <div className='mt-4'>
