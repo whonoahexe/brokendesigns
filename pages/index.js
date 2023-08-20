@@ -72,14 +72,14 @@ export default function Home() {
                     <div className='lg-display-b xs-display-n'>
                         <div className="row mt-200-px">
                             <div className="col-6-xl col-8-lg col-10-md">
-                                <p className='custom-text font-lg'>{`Hello! I'm`} Karthikeyan. Motion {`&`} graphic designer, UI/UX designer and a full stack web developer.</p>
+                                <p className='custom-text font-lg'>{`Hello! I'm`} Noah. Motion {`&`} graphic designer, UI/UX designer and a full stack web developer.</p>
                             </div>
                         </div>
                     </div>
                     <div className='lg-display-n md-display-b xs-display-n'>
                         <div className="row mt-8">
                             <div className="col-6-xl col-8-lg col-10-md col-12-xs">
-                                <p className='custom-text font-lg'>{`Hello! I'm`} Karthikeyan. Motion {`&`} graphic designer, UI/UX designer and a full stack web developer.</p>
+                                <p className='custom-text font-lg'>{`Hello! I'm`} Noah. Motion {`&`} graphic designer, UI/UX designer and a full stack web developer.</p>
                             </div>
                         </div>
                     </div>
