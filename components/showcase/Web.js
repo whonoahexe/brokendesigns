@@ -5,6 +5,16 @@ const Web = () => {
         <>
             <div className="row gap-2 mt-2">
                 <div className="col-4-xl col-6-lg col-12-xs">
+                    <a href="/work/anshika" rel="noreferrer"><Image src="/img/thumbnail/web/anshika.png" width={1080} height={1080} className="thumb-cover br-base" alt='cover' /></a>
+                    <p className="custom-text font-lg fw-md pt-1"><span className="pointer transition-base custom-misc-hover">.anshika - portfolio</span></p>
+                    <p className="custom-sub-text ls-0">A modern portfolio for a client.</p>
+                </div>
+                <div className="col-4-xl col-6-lg col-12-xs">
+                    <a href="https://springreen.in/" target="_blank" rel="noreferrer"><Image src="/img/thumbnail/web/springreen.png" width={1080} height={1080} className="thumb-cover br-base" alt='cover' /></a>
+                    <p className="custom-text font-lg fw-md pt-1"><span className="pointer transition-base custom-misc-hover">Springreen</span></p>
+                    <p className="custom-sub-text ls-0">Design and development for a client site.</p>
+                </div>
+                <div className="col-4-xl col-6-lg col-12-xs">
                     <a href="https://broken-lazy-docs.vercel.app/" target="_blank" rel="noreferrer"><Image src="/img/thumbnail/web/lazyy.png" width={1080} height={1080} className="thumb-cover br-base" alt='cover' /></a>
                     <p className="custom-text font-lg fw-md pt-1"><span className="pointer transition-base custom-misc-hover">Lazyycss.</span></p>
                     <p className="custom-sub-text ls-0">A design system for my UI designs.</p>
