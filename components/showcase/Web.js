@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Web = () => {
     return (
         <>
             <div className="row gap-2 mt-2">
                 <div className="col-4-xl col-6-lg col-12-xs">
-                    <a href="/work/anshika" rel="noreferrer"><Image src="/img/thumbnail/web/anshika.png" width={1080} height={1080} className="thumb-cover br-base" alt='cover' /></a>
+                    <Link href="/work/anshika" rel="noreferrer"><Image src="/img/thumbnail/web/anshika.png" width={1080} height={1080} className="thumb-cover br-base" alt='cover' /></Link>
                     <p className="custom-text font-lg fw-md pt-1"><span className="pointer transition-base custom-misc-hover">.anshika - portfolio</span></p>
                     <p className="custom-sub-text ls-0">A modern portfolio for a client.</p>
                 </div>

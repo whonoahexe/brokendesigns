@@ -23,7 +23,7 @@ const mattyvis = () => {
             <div>
                 <div className="card player-bg display-f justify-center">
                     <div className="mt-8 pb-2 vimeo-container">
-                        <Image src={"/img/mattyvisuals/render.png"} width={"1200"} height={"1200"} />
+                        <Image src={"/img/mattyvisuals/render.png"} width={"1200"} height={"1200"} alt="render" />
                     </div>
                 </div>
 

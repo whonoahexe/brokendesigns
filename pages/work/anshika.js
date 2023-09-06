@@ -23,7 +23,7 @@ const dcoderz = () => {
             <div className='mt-6'>
                 <div className="container mt-6">
                     <div className="display-f justify-between align-i-center mb-2 mt-6">
-                        <p className='custom-text font-lg'>Note: This is a work in progress! Here's the figma preview if you're interested - <a href="https://www.figma.com/file/OWmIe511OUZMb0wN5anDf9/.anshika_portfolio?type=design&node-id=554%3A930&mode=design&t=MoWDdeh6bbDkEGes-1" className='custom-color'>Link</a></p>
+                        <p className='custom-text font-lg'>{`Note: This is a work in progress! Here's the figma preview if you're interested -`} <a href="https://www.figma.com/file/OWmIe511OUZMb0wN5anDf9/.anshika_portfolio?type=design&node-id=554%3A930&mode=design&t=MoWDdeh6bbDkEGes-1" className='custom-color'>Link</a></p>
                         <a href="https://client-anshika.vercel.app/" target="_blank" rel="noreferrer"><button className='custom-btn-rounded custom-text pl-5 pr-5 pt-2 pb-2'>Web Preview</button></a>
                     </div>
                     <div className="row gap-2 mt-2">
