@@ -54,16 +54,11 @@ export const sourceCodePro = localFont({
   variable: "--font-source-code-pro",
 });
 
-export const metadata: Metadata = {
-  title: "brkn.",
-  description: "who? me?",
-};
-
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
         <Head>
-          <title>Broken - Portfolio</title>
+          <title>brkn.</title>
           <meta name="description" content="Hey! I'm Broken. A passionate self-taught motion, graphic, web designer." />
           <link rel="canonical" href="https://brokendesigns.studio/" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
