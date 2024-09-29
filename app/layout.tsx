@@ -1,20 +1,58 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import Head from "next/head";
+import localFont from "next/font/local";
 import 'material-symbols';
 
-import {
-  googleSansDisplay,
-  roboto,
-  spotifyCircular,
-  helveticaNeue,
-  sourceCodePro,
-} from "@/app/fonts";
 import '@/styles/globals.css';
 import { NavigationEvents } from '@/hooks/NavigationEvents';
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const googleSansDisplay = localFont({
+  src: [
+    { path: "../public/fonts/GoogleSansDisplayRegular.woff2", weight: "400" },
+    { path: "../public/fonts/GoogleSansDisplayMedium.woff2", weight: "500" },
+    { path: "../public/fonts/GoogleSansDisplayBold.woff2", weight: "700" },
+  ],
+  variable: "--font-google-sans-display",
+});
+
+export const roboto = localFont({
+  src: [
+    { path: "../public/fonts/RobotoRegular.woff2", weight: "400" },
+    { path: "../public/fonts/RobotoMedium.woff2", weight: "500" },
+    { path: "../public/fonts/RobotoBold.woff2", weight: "700" },
+  ],
+  variable: "--font-roboto",
+});
+
+export const spotifyCircular = localFont({
+  src: [
+    { path: "../public/fonts/SpotifyCircular.woff2", weight: "400" },
+    { path: "../public/fonts/SpotifyCircularBlack.woff2", weight: "500" },
+    { path: "../public/fonts/SpotifyCircularBold.woff2", weight: "700" },
+  ],
+  variable: "--font-spotify-circular",
+});
+
+export const helveticaNeue = localFont({
+  src: [
+    { path: "../public/fonts/HelveticaNeueRegular.woff2", weight: "400" },
+    { path: "../public/fonts/HelveticaNeueBold.woff2", weight: "700" },
+  ],
+  variable: "--font-helvetica-neue",
+});
+
+export const sourceCodePro = localFont({
+  src: [
+    { path: "../public/fonts/SourceCodeProRegular.woff2", weight: "400" },
+    { path: "../public/fonts/SourceCodeProMedium.woff2", weight: "500" },
+    { path: "../public/fonts/SourceCodeProBold.woff2", weight: "700" },
+  ],
+  variable: "--font-source-code-pro",
+});
 
 export const metadata: Metadata = {
   title: "brkn.",
@@ -41,7 +79,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <meta name="twitter:creator" content="@TheBroken_XD" />
       </Head>
       
-      <body className={`${googleSansDisplay.variable} ${roboto.variable} ${spotifyCircular.variable} ${helveticaNeue.variable} ${sourceCodePro.variable} antialiased bg-black`} style={{ fontFamily: `"Google Sans Display", "Roboto", "spotify-circular", "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic Pro", meiryo, "MS Gothic", sans-serif` }}>
+      <body className={`${googleSansDisplay.variable} ${roboto.variable} ${spotifyCircular.variable} ${helveticaNeue.variable} ${sourceCodePro.variable} font-sans antialiased bg-black`} style={{ fontFamily: `"Google Sans Display", "Roboto", "spotify-circular", "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic Pro", meiryo, "MS Gothic", sans-serif` }}>
         <Suspense fallback={null}>
           <NavigationEvents />
         </Suspense>

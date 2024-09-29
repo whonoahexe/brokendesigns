@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
+    "@next/font": "^14.2.13",
     "framer-motion": "^11.9.0",
     "lottie-react": "^2.4.0",
     "material-symbols": "^0.23.0",
