@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react";
 import Link from "next/link";
 
 import { getFirstWordLowercase } from "@/utils";
-import { sourceCodePro } from "@/app/fonts";
+import { sourceCodePro } from "./layout";
 import Works from "@/components/WorkData";
 import WorkCard from "@/components/WorkCard";
 import Button from "@/components/core/Button";
