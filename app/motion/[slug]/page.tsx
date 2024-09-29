@@ -12,7 +12,7 @@ const Page = ({ params }: PageProps) => {
 
       {card && (
         <div className="flex flex-col mt-6">
-          <p className="text-[45px] text-white"><span className="racking-tight" style={{ fontFamily: "Space Mono, monospace" }}>{card.title}</span></p>
+          <p className="text-[45px] text-white"><span className="font-display tracking-tight">{card.title}</span></p>
           <p className="text-[18px] text-white">{card.description}</p>
         </div>
       )}

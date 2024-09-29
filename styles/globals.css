@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Product+Sans:100,300,400,500,700,900,100i,300i,400i,500i,700i,900i&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,6 +29,18 @@
     &:active {
         background-color: rgba(255,255,255,.5);
     }
+}
+
+body {
+    font-family: "Product Sans", sans-serif;
+}
+
+.font-sans {
+    font-family: "Product Sans", sans-serif;
+}
+
+.font-display {
+    font-family: "Space Mono", system-ui;
 }
 
 /* Make clicks pass-through */

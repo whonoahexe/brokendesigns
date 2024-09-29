@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="flex flex-col lg:flex-row gap-12 md:gap-6 lg:gap-0 justify-between items-center container w-full max-w-[92%] px-12 py-24 mx-auto">
-      <Link href="mailto:broken.contact.1211@gmail.com" className="flex items-center gap-2 text-4xl text-white hover:text-[#c4c6d0] transition-all duration-150 ease-in-out-def" style={{ fontFamily: "Space Mono, monospace" }}>
+      <Link href="mailto:broken.contact.1211@gmail.com" className="font-display flex items-center gap-2 text-4xl text-white hover:text-[#c4c6d0] transition-all duration-150 ease-in-out-def">
         SEND AN EMAIL <ArrowUpRightIcon className="w-10 h-10" />
       </Link>
       <div className="flex gap-12 text-white underline underline-offset-2">

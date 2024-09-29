@@ -91,7 +91,7 @@ const Contact = () => {
   return (
     <div className="container w-full max-w-[98%] md:max-w-[92%] px-6 md:px-12 mx-auto mt-52">
       <p className="flex justify-center lg:justify-start w-full text-5xl md:text-8xl text-white">
-        <span className='bg-accent-primary rounded-full px-12' style={{ fontFamily: "Space Mono, monospace" }}>CONTACT</span>
+        <span className='font-display bg-accent-primary rounded-full px-12'>CONTACT</span>
       </p>
 
       <form onSubmit={handleSubmit}>
