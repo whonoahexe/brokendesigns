@@ -4,7 +4,6 @@ import { useRef, useEffect } from "react";
 import Link from "next/link";
 
 import { getFirstWordLowercase } from "@/utils";
-import { sourceCodePro } from "./layout";
 import Works from "@/components/WorkData";
 import WorkCard from "@/components/WorkCard";
 import Button from "@/components/core/Button";
@@ -31,16 +30,16 @@ const Page = () => {
 
   return (
     <>
-      <div ref={titleRef} className={`${sourceCodePro.variable} hidden md:flex justify-between w-full mt-28 tracking-normal`} style={{ fontFamily: "Space Mono, monospace" }}>
+      <div ref={titleRef} className="font-display hidden md:flex justify-between w-full mt-28 tracking-normal">
           <p className="text-[7.5rem] text-white">..</p>
           <p className="text-[7.5rem] text-white">BROKEN.</p>
       </div>
 
       <div className="container w-full max-w-[98%] md:max-w-[92%] px-6 md:px-12 mx-auto mt-40 md:mt-20 lg:mt-52">
         <div className="block md:hidden mt-40">
-          <p className="text-7xl text-white" style={{ fontFamily: "Space Mono, monospace" }}>BRKN.</p>
+          <p className="font-display text-7xl text-white">BRKN.</p>
         </div>
-        <p className="text-xl text-white mt-12 md:mt-0" style={{ fontFamily: "Space Mono, monospace" }}>WHO AM I? Noah here. Motion, Graphic, UI/UX, Web Developer.</p>
+        <p className="font-display text-xl text-white mt-12 md:mt-0">WHO AM I? Noah here. Motion, Graphic, UI/UX, Web Developer.</p>
 
         <div className="hidden md:flex justify-center lg:justify-start items-center gap-12 p-12 mt-12 rounded-lg" style={{ backgroundImage: "linear-gradient(270deg,rgba(18,19,20,0) 50%,#005ac1),linear-gradient(180deg,rgba(18,19,20,0) 50%,#005ac1)" }}>
           {allFields.map((field, index) => (

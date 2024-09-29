@@ -1,6 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../public/font/googlesansdisplayregular.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../public/font/googlesansdisplaymedium.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../public/font/googlesansdisplaybold.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../public/font/helveticaneueregular.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../public/font/helveticaneuebold.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../public/font/robotoregular.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../public/font/robotomedium.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../public/font/robotobold.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../public/font/sourcecodeproregular.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../public/font/sourcecodepromedium.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../public/font/sourcecodeprobold.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Spotify Circular';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../public/font/spotifycircular.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Spotify Circular';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../public/font/spotifycircularbold.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Spotify Circular';
+    font-style: normal;
+    font-weight: 900;
+    src: url("../public/font/spotifycircularblack.woff2") format('woff2');
+}
 
 :root {
     --ease-fast-slow: cubic-bezier(0.4, 0, 0.2, 1);
@@ -26,6 +126,18 @@
     &:active {
         background-color: rgba(255,255,255,.5);
     }
+}
+
+body {
+    font-family: "Google Sans Display", "Roboto", "spotify-circular", "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic Pro", meiryo, "MS Gothic", sans-serif;
+}
+
+.font-sans {
+    font-family: "Google Sans Display", "Roboto", "spotify-circular", "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic Pro", meiryo, "MS Gothic", sans-serif;
+}
+
+.font-display {
+    font-family: "Space Mono", system-ui;
 }
 
 /* Make clicks pass-through */
