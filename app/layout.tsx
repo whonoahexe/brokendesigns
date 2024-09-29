@@ -9,7 +9,7 @@ import {
   spotifyCircular,
   helveticaNeue,
   sourceCodePro,
-} from "@/lib/fonts";
+} from "@/app/fonts";
 import '@/styles/globals.css';
 import { NavigationEvents } from '@/hooks/NavigationEvents';
 
