@@ -12,44 +12,44 @@ import Footer from "@/components/Footer";
 
 export const googleSansDisplay = localFont({
   src: [
-    { path: "../public/fonts/GoogleSansDisplayRegular.woff2", weight: "400" },
-    { path: "../public/fonts/GoogleSansDisplayMedium.woff2", weight: "500" },
-    { path: "../public/fonts/GoogleSansDisplayBold.woff2", weight: "700" },
+    { path: "../public/font/googlesansdisplayregular.woff2", weight: "400" },
+    { path: "../public/font/googlesansdisplaymedium.woff2", weight: "500" },
+    { path: "../public/font/googlesansdisplaybold.woff2", weight: "700" },
   ],
   variable: "--font-google-sans-display",
 });
 
 export const roboto = localFont({
   src: [
-    { path: "../public/fonts/RobotoRegular.woff2", weight: "400" },
-    { path: "../public/fonts/RobotoMedium.woff2", weight: "500" },
-    { path: "../public/fonts/RobotoBold.woff2", weight: "700" },
+    { path: "../public/font/robotoregular.woff2", weight: "400" },
+    { path: "../public/font/robotomedium.woff2", weight: "500" },
+    { path: "../public/font/robotobold.woff2", weight: "700" },
   ],
   variable: "--font-roboto",
 });
 
 export const spotifyCircular = localFont({
   src: [
-    { path: "../public/fonts/SpotifyCircular.woff2", weight: "400" },
-    { path: "../public/fonts/SpotifyCircularBlack.woff2", weight: "500" },
-    { path: "../public/fonts/SpotifyCircularBold.woff2", weight: "700" },
+    { path: "../public/font/spotifycircular.woff2", weight: "400" },
+    { path: "../public/font/spotifycircularblack.woff2", weight: "500" },
+    { path: "../public/font/spotifycircularbold.woff2", weight: "700" },
   ],
   variable: "--font-spotify-circular",
 });
 
 export const helveticaNeue = localFont({
   src: [
-    { path: "../public/fonts/HelveticaNeueRegular.woff2", weight: "400" },
-    { path: "../public/fonts/HelveticaNeueBold.woff2", weight: "700" },
+    { path: "../public/font/helveticaneueregular.woff2", weight: "400" },
+    { path: "../public/font/helveticaneuebold.woff2", weight: "700" },
   ],
   variable: "--font-helvetica-neue",
 });
 
 export const sourceCodePro = localFont({
   src: [
-    { path: "../public/fonts/SourceCodeProRegular.woff2", weight: "400" },
-    { path: "../public/fonts/SourceCodeProMedium.woff2", weight: "500" },
-    { path: "../public/fonts/SourceCodeProBold.woff2", weight: "700" },
+    { path: "../public/font/sourcecodeproregular.woff2", weight: "400" },
+    { path: "../public/font/sourcecodepromedium.woff2", weight: "500" },
+    { path: "../public/font/sourcecodeprobold.woff2", weight: "700" },
   ],
   variable: "--font-source-code-pro",
 });
