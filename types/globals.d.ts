@@ -11,18 +11,18 @@ export declare global {
 
     interface WorkItem {
         index: number;
-        field?: string;
-        category?: string;
+        field: string;
+        category: string;
         title: string;
         description: string;
         image: string;
-        homepage?: boolean;
+        homepage: boolean;
         url?: string;
         cols: number;
-        showImg?: boolean;
-        showImg2?: boolean;
-        showImg3?: boolean;
-        showImg4?: boolean;
+        showImg?: string;
+        showImg2?: string;
+        showImg3?: string;
+        showImg4?: string;
     }
 
     interface ButtonProps {
