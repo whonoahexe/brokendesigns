@@ -7,30 +7,10 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   safelist: [
-    "col-span-1",
-    "col-span-2",
-    "col-span-3",
-    "col-span-4",
-    "col-span-5",
-    "col-span-6",
-    "col-span-7",
-    "col-span-8",
-    "col-span-9",
-    "col-span-10",
-    "col-span-11",
-    "col-span-12",
-    "lg:col-span-1",
-    "lg:col-span-2",
-    "lg:col-span-3",
-    "lg:col-span-4",
-    "lg:col-span-5",
-    "lg:col-span-6",
-    "lg:col-span-7",
-    "lg:col-span-8",
-    "lg:col-span-9",
-    "lg:col-span-10",
-    "lg:col-span-11",
-    "lg:col-span-12",
+    {
+      pattern: /col-span-(1|2|3|4|5|6|7|8|9|10|11|12)/,
+      variants: ["lg"],
+    },
   ],
   theme: {
     colors: {
@@ -41,6 +21,9 @@ const config: Config = {
       "black-secondary": "#19191B",
       "black-tertiary": "#212124",
       "accent-primary": "#005ac1",
+      "gray-hover": "#c4c6d0",
+      "dark-hover": "#1D1D1D",
+      "error-text": "#ffa4aa",
       overlay: "#0008",
       black: "#000",
       white: "#fff",
@@ -49,6 +32,11 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      backgroundImage: {
+        "gradient-nav":
+          "linear-gradient(270deg, rgba(18,19,20,0) 50%, #005ac1), linear-gradient(180deg, rgba(18,19,20,0) 50%, #005ac1)",
+        "gradient-hero": "linear-gradient(135deg, #000 0%, #005ac1 100%)",
       },
       transitionTimingFunction: {
         "in-out-def": "cubic-bezier(0.79,0.14,0.15,0.86)",

@@ -72,7 +72,7 @@ const Navbar = () => {
           <li onClick={toggleSidebar}>
             <Link
               href="/"
-              className="text-4xl transition-all ease-in-out-def duration-150 tracking-normal text-white hover:text-[#1D1D1D] select-none"
+              className="text-4xl transition-all ease-in-out-def duration-150 tracking-normal text-white hover:text-dark-hover select-none"
             >
               Home
             </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
           <li onClick={toggleSidebar}>
             <Link
               href="/motion"
-              className="text-4xl transition-all ease-in-out-def duration-150 tracking-normal text-white hover:text-[#1D1D1D] select-none"
+              className="text-4xl transition-all ease-in-out-def duration-150 tracking-normal text-white hover:text-dark-hover select-none"
             >
               Work
             </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
           <li onClick={toggleSidebar}>
             <Link
               href="/contact"
-              className="text-4xl transition-all ease-in-out-def duration-150 tracking-normal text-white hover:text-[#1D1D1D] select-none"
+              className="text-4xl transition-all ease-in-out-def duration-150 tracking-normal text-white hover:text-dark-hover select-none"
             >
               Contact
             </Link>

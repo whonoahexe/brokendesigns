@@ -147,7 +147,7 @@ const Contact = () => {
                   isLoading || success ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               />
-              {errors.name && <p className="text-[#ffa4aa]">{errors.name}</p>}
+              {errors.name && <p className="text-error-text">{errors.name}</p>}
             </div>
             <div className="w-full">
               <input
@@ -162,7 +162,7 @@ const Contact = () => {
                   isLoading || success ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               />
-              {errors.email && <p className="text-[#ffa4aa]">{errors.email}</p>}
+              {errors.email && <p className="text-error-text">{errors.email}</p>}
             </div>
           </div>
           <div className="w-full">
@@ -177,7 +177,7 @@ const Contact = () => {
                 isLoading || success ? "opacity-50 cursor-not-allowed" : ""
               }`}
             />
-            {errors.text && <p className="text-[#ffa4aa]">{errors.text}</p>}
+            {errors.text && <p className="text-error-text">{errors.text}</p>}
           </div>
           <Button
             type="submit"
@@ -199,7 +199,7 @@ const Contact = () => {
             }
           />
 
-          {errors.submit && <p className="text-[#ffa4aa] text-center mt-4">{errors.submit}</p>}
+          {errors.submit && <p className="text-error-text text-center mt-4">{errors.submit}</p>}
         </div>
       </form>
     </div>

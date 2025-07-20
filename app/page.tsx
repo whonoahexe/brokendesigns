@@ -43,16 +43,10 @@ const Page = () => {
           WHO AM I? Noah here. Motion, Graphic, UI/UX, Web Developer.
         </p>
 
-        <div
-          className="hidden md:flex justify-center lg:justify-start items-center gap-12 p-12 mt-12 rounded-lg"
-          style={{
-            backgroundImage:
-              "linear-gradient(270deg,rgba(18,19,20,0) 50%,#005ac1),linear-gradient(180deg,rgba(18,19,20,0) 50%,#005ac1)",
-          }}
-        >
+        <div className="hidden md:flex justify-center lg:justify-start items-center gap-12 p-12 mt-12 rounded-lg bg-gradient-nav">
           {allFields.map((field, index) => (
             <Link key={index} href={getFirstWordLowercase(field!)}>
-              <span className="text-xl text-white hover:text-[#c4c6d0] transition-all duration-150 ease-in-out-def">
+              <span className="text-xl text-white hover:text-gray-hover transition-all duration-150 ease-in-out-def">
                 {field}
               </span>
             </Link>

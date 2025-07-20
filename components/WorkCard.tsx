@@ -22,7 +22,7 @@ const WorkCard = ({ src, alt, desc, cols, field, onClick, className }: WorkCardP
         <p className="font-display text-[35px] md:text-[40px] lg:text-[45px] tracking-tight" onClick={onClick}>
           <Link href={`${getFirstWordLowercase(field)}/${titleToSlug(alt)}`}>
             <span
-              className="text-white hover:text-[#c4c6d0] transition-all duration-150 ease-in-out-def cursor-pointer"
+              className="text-white hover:text-gray-hover transition-all duration-150 ease-in-out-def cursor-pointer"
               onClick={onClick}
             >
               {alt}
