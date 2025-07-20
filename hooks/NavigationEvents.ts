@@ -9,11 +9,15 @@ export const NavigationEvents = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
-  nProgress.configure({ showSpinner: false })
-  nProgress.start()
+  try {
+    nProgress.configure({ showSpinner: false })
+    nProgress.start()
+  } catch (error) {}
 
   useEffect(() => {
-    nProgress.done()
+    try {
+      nProgress.done()
+    } catch (error) {}
   }, [pathname, searchParams])
 
   return null
