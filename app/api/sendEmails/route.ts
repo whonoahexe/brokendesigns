@@ -44,7 +44,7 @@ export async function POST(req: Request) {
         {
           status: 413,
           headers: { ...corsHeaders, ...securityHeaders },
-        },
+        }
       )
     }
 
@@ -64,7 +64,7 @@ export async function POST(req: Request) {
             ...securityHeaders,
             "Retry-After": Math.ceil((contactFormLimiter.getResetTime(clientId) - Date.now()) / 1000).toString(),
           },
-        },
+        }
       )
     }
 
@@ -87,7 +87,7 @@ export async function POST(req: Request) {
         {
           status: 400,
           headers: { ...corsHeaders, ...securityHeaders },
-        },
+        }
       )
     }
 
@@ -101,7 +101,7 @@ export async function POST(req: Request) {
         {
           status: 500,
           headers: { ...corsHeaders, ...securityHeaders },
-        },
+        }
       )
     }
 
@@ -142,7 +142,7 @@ Submitted at: ${new Date().toISOString()}
       {
         status: 200,
         headers: { ...corsHeaders, ...securityHeaders },
-      },
+      }
     )
   } catch (error) {
     if (error instanceof ZodError) {
@@ -158,7 +158,7 @@ Submitted at: ${new Date().toISOString()}
         {
           status: 400,
           headers: { ...corsHeaders, ...securityHeaders },
-        },
+        }
       )
     }
 
@@ -172,7 +172,7 @@ Submitted at: ${new Date().toISOString()}
       {
         status: 500,
         headers: { ...corsHeaders, ...securityHeaders },
-      },
+      }
     )
   }
 }

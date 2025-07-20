@@ -1,5 +1,27 @@
+import type { Metadata } from "next"
 import { slugToTitle } from "@/utils"
 import Works from "@/components/WorkData"
+
+type Props = {
+  params: { slug: string }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const card = Works.find((work) => work.title === slugToTitle(params.slug as string))
+
+  if (!card) {
+    return {
+      title: "Motion Design - brkn.",
+      description: "Are you lost?",
+    }
+  }
+
+  return {
+    title: `${card.title} - Motion Design - brkn.`,
+    description: card.description,
+    keywords: ["motion design", "animation", card.category, "broken", "portfolio"],
+  }
+}
 
 const Page = ({ params }: PageProps) => {
   const card = Works.find((work) => work.title === slugToTitle(params.slug as string))

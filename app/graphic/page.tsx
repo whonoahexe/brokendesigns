@@ -15,7 +15,7 @@ const graphic = () => {
   const [category, setCategory] = useState<number>(0)
 
   const filteredWorks = Works.filter(
-    (work) => work.field === "Graphic Design" && work.category === categories[category],
+    (work) => work.field === "Graphic Design" && work.category === categories[category]
   )
 
   return (
