@@ -69,7 +69,7 @@ const Page = () => {
 
         <div className="flex justify-center w-full mt-12">
           <Link href="/motion">
-            <Button classname="px-12" text="View More" onClick={() => {}} />
+            <Button className="px-12" text="View More" onClick={() => {}} />
           </Link>
         </div>
       </div>

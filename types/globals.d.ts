@@ -25,15 +25,6 @@ export declare global {
     showImg4?: string
   }
 
-  interface ButtonProps {
-    type?: "submit" | "reset" | "button"
-    isActive?: boolean
-    text: ReactNode
-    disabled?: boolean
-    classname?: string
-    onClick?: () => void
-  }
-
   interface PageProps {
     params: {
       slug: string

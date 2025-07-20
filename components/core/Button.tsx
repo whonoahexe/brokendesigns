@@ -1,6 +1,24 @@
-const Button = ({ type, isActive = true, text, disabled, classname, onClick }: ButtonProps) => {
-  const activePrimary = `border-2 border-white-primary rounded-full px-6 py-3 bg-accent-primary ${classname}`
-  const inactive = `border-2 border-black rounded-full px-6 py-3 ${classname}`
+import React from "react"
+
+interface ButtonProps {
+  type?: "submit" | "reset" | "button"
+  isActive?: boolean
+  text: React.ReactNode
+  disabled?: boolean
+  className?: string
+  onClick?: () => void
+}
+
+const Button: React.FC<ButtonProps> = ({
+  type = "button",
+  isActive = true,
+  text,
+  disabled = false,
+  className = "",
+  onClick,
+}) => {
+  const activePrimary = `border-2 border-white-primary rounded-full px-6 py-3 bg-accent-primary ${className}`
+  const inactive = `border-2 border-black rounded-full px-6 py-3 ${className}`
 
   const buttonClass = isActive ? activePrimary : inactive
 

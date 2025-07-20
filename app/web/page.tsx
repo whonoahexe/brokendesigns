@@ -9,7 +9,7 @@ import Works from "@/components/WorkData"
 import Button from "@/components/core/Button"
 import WorkCard from "@/components/WorkCard"
 
-const web = () => {
+const WebPage = () => {
   const allFields = Array.from(new Set(Works.map((work) => work.field)))
   const categories = ["Site", "App"]
   const [category, setCategory] = useState<number>(0)
@@ -63,4 +63,4 @@ const web = () => {
   )
 }
 
-export default web
+export default WebPage

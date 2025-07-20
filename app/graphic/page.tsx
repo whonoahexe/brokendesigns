@@ -9,7 +9,7 @@ import Works from "@/components/WorkData"
 import Button from "@/components/core/Button"
 import WorkCard from "@/components/WorkCard"
 
-const graphic = () => {
+const GraphicPage = () => {
   const allFields = Array.from(new Set(Works.map((work) => work.field)))
   const categories = ["Branding", "Illustration", "Advertisement"]
   const [category, setCategory] = useState<number>(0)
@@ -65,4 +65,4 @@ const graphic = () => {
   )
 }
 
-export default graphic
+export default GraphicPage

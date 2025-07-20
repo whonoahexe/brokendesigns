@@ -1,25 +1,26 @@
 "use client"
 
-import { useState } from "react"
+import { useState, ChangeEvent, FormEvent } from "react"
 
 import Button from "@/components/core/Button"
+import type { FormData, FormErrors, ValidationDetail, ApiResponse } from "@/types/forms"
 
 const Contact = () => {
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<FormData>({
     name: "",
     text: "",
     email: "",
   })
-  const [errors, setErrors] = useState({
+  const [errors, setErrors] = useState<FormErrors>({
     name: "",
     email: "",
     text: "",
     submit: "",
   })
-  const [success, setSuccess] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
+  const [success, setSuccess] = useState<boolean>(false)
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (isLoading || success) {
       return
     }
@@ -61,7 +62,7 @@ const Contact = () => {
     return valid
   }
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     if (success || isLoading) {
@@ -83,7 +84,7 @@ const Contact = () => {
         body: JSON.stringify(form),
       })
 
-      const data = await response.json()
+      const data: ApiResponse = await response.json()
 
       if (response.ok && data.success) {
         setSuccess(true)
@@ -94,24 +95,27 @@ const Contact = () => {
         })
         setErrors({ name: "", email: "", text: "", submit: "" })
       } else {
-        if (response.status === 429) {
-          setErrors((prev) => ({
-            ...prev,
-            submit: data.error + (data.retryAfter ? ` Try again in ${data.retryAfter} seconds.` : ""),
-          }))
-        } else if (response.status === 400 && data.details) {
-          const serverErrors = { name: "", email: "", text: "", submit: "" }
-          data.details.forEach((detail: any) => {
-            if (detail.field in serverErrors) {
-              ;(serverErrors as any)[detail.field] = detail.message
-            }
-          })
-          setErrors(serverErrors)
-        } else {
-          setErrors((prev) => ({
-            ...prev,
-            submit: data.error || "Failed to send message. Please try again.",
-          }))
+        // Handle error responses
+        if (!data.success) {
+          if (response.status === 429) {
+            setErrors((prev) => ({
+              ...prev,
+              submit: data.error + (data.retryAfter ? ` Try again in ${data.retryAfter} seconds.` : ""),
+            }))
+          } else if (response.status === 400 && data.details) {
+            const serverErrors: FormErrors = { name: "", email: "", text: "", submit: "" }
+            data.details.forEach((detail: ValidationDetail) => {
+              if (detail.field in serverErrors) {
+                ;(serverErrors as any)[detail.field] = detail.message
+              }
+            })
+            setErrors(serverErrors)
+          } else {
+            setErrors((prev) => ({
+              ...prev,
+              submit: data.error || "Failed to send message. Please try again.",
+            }))
+          }
         }
       }
     } catch (error) {
@@ -181,7 +185,7 @@ const Contact = () => {
           </div>
           <Button
             type="submit"
-            classname="py-6"
+            className="py-6"
             disabled={success || isLoading}
             text={
               success ? (

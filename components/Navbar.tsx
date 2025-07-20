@@ -45,7 +45,7 @@ const Navbar = () => {
                 key={index}
                 isActive={pathname.replace(/^\//, "") === getFirstWordLowercase(field!)}
                 text={field!}
-                classname="hidden md:block"
+                className="hidden md:block"
                 onClick={() => router.push(`/${getFirstWordLowercase(field!)}`)}
               />
             ))}

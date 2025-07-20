@@ -4,6 +4,7 @@ import "material-symbols"
 
 import "@/styles/globals.css"
 import { NavigationEvents } from "@/hooks/NavigationEvents"
+import ErrorBoundary from "@/components/core/ErrorBoundary"
 
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
@@ -36,13 +37,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className="font-sans antialiased bg-black">
-        <Suspense fallback={null}>
-          <NavigationEvents />
-        </Suspense>
-
-        <Navbar />
-        {children}
-        <Footer />
+        <ErrorBoundary>
+          <Suspense>
+            <NavigationEvents />
+          </Suspense>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </ErrorBoundary>
       </body>
     </html>
   )
