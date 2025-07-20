@@ -1,117 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Product+Sans:100,300,400,500,700,900,100i,300i,400i,500i,700i,900i&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Product+Sans:100,300,400,500,700,900,100i,300i,400i,500i,700i,900i&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    --ease-fast-slow: cubic-bezier(0.4, 0, 0.2, 1);
-    --ease-slow-slow: cubic-bezier(0.4, 0, 0.4, 1);
-    --ease-slow-fast: cubic-bezier(0.2, 0, 0.8, 1);
-  }
+  --ease-fast-slow: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-slow-slow: cubic-bezier(0.4, 0, 0.4, 1);
+  --ease-slow-fast: cubic-bezier(0.2, 0, 0.8, 1);
+}
 
 *::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-    transition: 0.3s;
+  width: 5px;
+  height: 5px;
+  transition: 0.3s;
 }
 
 *::-webkit-scrollbar-track {
-    background-color: transparent;
+  background-color: transparent;
 }
-  
+
 *::-webkit-scrollbar-thumb {
-    background-color: rgba(255,255,255,.1);
-    &:hover {
-        background-color: rgba(255,255,255,.3);
-    }
-    &:active {
-        background-color: rgba(255,255,255,.5);
-    }
+  background-color: rgba(255, 255, 255, 0.1);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  &:active {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 }
 
 body {
-    font-family: "Product Sans", sans-serif;
+  font-family: "Product Sans", sans-serif;
 }
 
 .font-sans {
-    font-family: "Product Sans", sans-serif;
+  font-family: "Product Sans", sans-serif;
 }
 
 .font-display {
-    font-family: "Space Mono", system-ui;
+  font-family: "Space Mono", system-ui;
 }
 
 /* Make clicks pass-through */
 #nprogress {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 #nprogress .bar {
-    background: linear-gradient(
-        to right,
-        #fff 0%,
-        #fff8 10%,
-        #fffa 60%,
-        #fff 80%
-    );
-    background-size: 80% auto;
-    animation: nprogress-shine 2s linear infinite;
+  background: linear-gradient(to right, #fff 0%, #fff8 10%, #fffa 60%, #fff 80%);
+  background-size: 80% auto;
+  animation: nprogress-shine 2s linear infinite;
 
-    position: fixed;
-    z-index: 1031;
-    top: 0;
-    left: 0;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
 
-    width: 100%;
-    height: 5px;
+  width: 100%;
+  height: 5px;
 
-    transition: opacity 1s ease-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 1s ease-out,
+    transform 0.3s ease-in-out;
 }
 
 /* Apply the shine animation from Pace.js */
 @keyframes nprogress-shine {
-    to {
-        background-position: 400% center;
-    }
+  to {
+    background-position: 400% center;
+  }
 }
 
 /* Fancy blur effect for the trailing peg */
 #nprogress .peg {
-    display: block;
-    position: absolute;
-    right: 0px;
-    width: 120px;
-    height: 100%;
-    background: linear-gradient(11deg, #fff0, #fff8 60%, #fff 100%);
-    filter: blur(1px);
-    border-radius: 0 5px 5px 0;
-    transform: translate(2px, -5px);
-    opacity: 1.0;
-    transition: opacity 1s ease-out;
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 120px;
+  height: 100%;
+  background: linear-gradient(11deg, #fff0, #fff8 60%, #fff 100%);
+  filter: blur(1px);
+  border-radius: 0 5px 5px 0;
+  transform: translate(2px, -5px);
+  opacity: 1;
+  transition: opacity 1s ease-out;
 }
 
 /* Remove spinner as in your original NProgress setup */
 #nprogress .spinner {
-    display: none;
+  display: none;
 }
 
 .nprogress-custom-parent {
-    overflow: hidden;
-    position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
 .nprogress-custom-parent #nprogress .bar {
-    position: absolute;
+  position: absolute;
 }
 
 /* Optional spinner if needed */
 @-webkit-keyframes nprogress-spinner {
-    0%   { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 @keyframes nprogress-spinner {
-    0%   { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

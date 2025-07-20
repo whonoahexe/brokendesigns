@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config: Config = {
   content: [
@@ -30,7 +30,7 @@ const config: Config = {
     "lg:col-span-9",
     "lg:col-span-10",
     "lg:col-span-11",
-    "lg:col-span-12"
+    "lg:col-span-12",
   ],
   theme: {
     colors: {
@@ -41,9 +41,9 @@ const config: Config = {
       "black-secondary": "#19191B",
       "black-tertiary": "#212124",
       "accent-primary": "#005ac1",
-      "overlay": "#0008",
-      "black": "#000",
-      "white": "#fff",
+      overlay: "#0008",
+      black: "#000",
+      white: "#fff",
     },
     extend: {
       colors: {
@@ -53,9 +53,9 @@ const config: Config = {
       transitionTimingFunction: {
         "in-out-def": "cubic-bezier(0.79,0.14,0.15,0.86)",
         "in-out-exp": "cubic-bezier(.77,0,.18,1)",
-      }
+      },
     },
   },
   plugins: [],
-};
-export default config;
+}
+export default config
