@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${card.title} - brkn.`,
     description: card.description,
-    keywords: ["graphic design", card.category, "broken", "portfolio"],
+    keywords: ["graphic design", card.category, "brkn", "portfolio"],
   }
 }
 

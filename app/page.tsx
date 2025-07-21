@@ -32,7 +32,7 @@ const Page = () => {
     <>
       <div ref={titleRef} className="font-display hidden md:flex justify-between w-full mt-28 tracking-normal">
         <p className="text-[7.5rem] text-white">..</p>
-        <p className="text-[7.5rem] text-white">BROKEN.</p>
+        <p className="text-[7.5rem] text-white">BRKN.</p>
       </div>
 
       <div className="container w-full max-w-[98%] md:max-w-[92%] px-6 md:px-12 mx-auto mt-40 md:mt-20 lg:mt-52">

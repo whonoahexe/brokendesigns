@@ -53,7 +53,7 @@ export const EXTERNAL_LINKS = {
     DISCORD: "https://discordapp.com/users/846291281746329601",
     GITHUB: "https://github.com/whonoahexe",
   },
-  EMAIL: "mailto:broken.contact.1211@gmail.com",
+  EMAIL: "mailto:noah@brkn.me",
   WEBSITE: "https://brkn.me",
 } as const
 
