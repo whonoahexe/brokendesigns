@@ -40,7 +40,7 @@ const Page = () => {
           <p className="font-display text-7xl text-white">BRKN.</p>
         </div>
         <p className="font-display text-xl text-white mt-12 md:mt-0">
-          WHO AM I? Noah here. Motion, Graphic, UI/UX, Web Design & Developer.
+          {`👀 Oh Hello! I'm Karthikeyan (Noah, alter ego), an enthusiastic self-taught motion, graphic, web designer & developer.`}
         </p>
 
         <div className="hidden md:flex justify-center lg:justify-start items-center gap-12 p-12 mt-12 rounded-lg bg-gradient-nav">

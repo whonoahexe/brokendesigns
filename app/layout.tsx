@@ -11,7 +11,8 @@ import Footer from "@/components/Footer"
 
 export const metadata: Metadata = {
   title: "brkn.",
-  description: "Hey! I'm Noah, a passionate self-taught motion, graphic, web designer & developer.",
+  description:
+    "👀 Hey! I'm Karthikeyan (Noah, alter ego), a passionate self-taught motion, graphic, web designer & developer.",
   keywords: ["portfolio", "motion design", "graphic design", "web design", "ui/ux", "brkn", "noah"],
   authors: [{ name: "Noah", url: "https://brkn.me/" }],
   creator: "Noah",
