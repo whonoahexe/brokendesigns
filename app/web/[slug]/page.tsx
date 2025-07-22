@@ -30,27 +30,27 @@ const Page = ({ params }: PageProps) => {
     <div className="container w-full max-w-[98%] md:max-w-[92%] px-6 md:px-12 mx-auto mt-40 md:mt-52">
       {card && (
         <>
-          <div className="w-full aspect-auto bg-black-tertiary rounded-[22px] mt-16">
-            <img src={`/${card.showImg}`} alt="Thumbnail" className="w-full h-full object-cover rounded-[22px]" />
-          </div>
+          {(() => {
+            const images = [card.showImg, card.showImg2, card.showImg3, card.showImg4].filter(Boolean)
+            const isApp = card.category === "App"
 
-          {card.showImg2 && (
-            <div className="w-full aspect-auto bg-black-tertiary rounded-[22px] mt-16">
-              <img src={`/${card.showImg2}`} alt="Thumbnail" className="w-full h-full object-cover rounded-[22px]" />
-            </div>
-          )}
-
-          {card.showImg3 && (
-            <div className="w-full aspect-auto bg-black-tertiary rounded-[22px] mt-16">
-              <img src={`/${card.showImg3}`} alt="Thumbnail" className="w-full h-full object-cover rounded-[22px]" />
-            </div>
-          )}
-
-          {card.showImg4 && (
-            <div className="w-full aspect-auto bg-black-tertiary rounded-[22px] mt-16">
-              <img src={`/${card.showImg4}`} alt="Thumbnail" className="w-full h-full object-cover rounded-[22px]" />
-            </div>
-          )}
+            return (
+              <div className={`${isApp ? "grid grid-cols-1 md:grid-cols-2 gap-6" : "flex flex-col"} mt-16`}>
+                {images.map((img, index) => (
+                  <div
+                    key={index}
+                    className={`w-full aspect-auto bg-black-tertiary rounded-[22px] ${!isApp && index > 0 ? "mt-16" : ""}`}
+                  >
+                    <img
+                      src={`/${img}`}
+                      alt={`${card.title} - Image ${index + 1}`}
+                      className="w-full h-full object-cover rounded-[22px]"
+                    />
+                  </div>
+                ))}
+              </div>
+            )
+          })()}
 
           <div className="flex flex-col mt-6">
             <p className="text-[45px] text-white">
