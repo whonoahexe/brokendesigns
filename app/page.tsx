@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from "react"
 import Link from "next/link"
+import { ArrowUpRightIcon } from "@heroicons/react/16/solid"
 
 import { getFirstWordLowercase } from "@/utils"
 import Works from "@/components/WorkData"
@@ -10,7 +11,7 @@ import Button from "@/components/core/Button"
 
 const Page = () => {
   const titleRef = useRef<HTMLDivElement | null>(null)
-  const allFields = Array.from(new Set(Works.map((work) => work.field)))
+  const allFields = [...Array.from(new Set(Works.map((work) => work.field))), "Coding"]
   const filteredWorks = Works.filter((work) => work.homepage === true)
 
   useEffect(() => {
@@ -43,14 +44,49 @@ const Page = () => {
           {`👀 Oh Hello! I'm Karthikeyan (Noah, alter ego), an enthusiastic self-taught motion, graphic, web designer & developer.`}
         </p>
 
-        <div className="hidden md:flex justify-center lg:justify-start items-center gap-12 p-12 mt-12 rounded-lg bg-gradient-nav">
-          {allFields.map((field, index) => (
-            <Link key={index} href={getFirstWordLowercase(field!)}>
-              <span className="text-xl text-white hover:text-gray-hover transition-all duration-150 ease-in-out-def">
-                {field}
-              </span>
+        <div className="flex flex-col items-center text-center mt-16 mb-16">
+          <h2 className="font-display text-4xl text-white mb-8">Looking to hire me as a developer?</h2>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="/resume">
+              <Button
+                className="px-12"
+                text={
+                  <span className="flex items-center gap-2">
+                    Hire Me
+                    <ArrowUpRightIcon className="w-4 h-4" />
+                  </span>
+                }
+              />
             </Link>
-          ))}
+            <Link href="/contact">
+              <Button
+                className="px-12"
+                text={
+                  <span className="flex items-center gap-2">
+                    Contact Me
+                    <ArrowUpRightIcon className="w-4 h-4" />
+                  </span>
+                }
+              />
+            </Link>
+          </div>
+        </div>
+
+        <div className="hidden md:flex justify-center lg:justify-start items-center gap-12 p-12 mt-12 rounded-lg bg-gradient-nav">
+          {allFields.map((field, index) => {
+            const isCoding = field === "Coding"
+            const href = isCoding ? "https://github.com/whonoahexe" : getFirstWordLowercase(field!)
+            const target = isCoding ? "_blank" : undefined
+            const rel = isCoding ? "noopener noreferrer" : undefined
+
+            return (
+              <Link key={index} href={href} target={target} rel={rel}>
+                <span className="text-xl text-white hover:text-gray-hover transition-all duration-150 ease-in-out-def">
+                  {field}
+                </span>
+              </Link>
+            )
+          })}
         </div>
 
         <div className="grid grid-cols-12 gap-6 h-full">
