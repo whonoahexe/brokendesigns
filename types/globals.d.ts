@@ -1,4 +1,4 @@
-export declare global {
+declare global {
   interface WorkCardProps {
     src: string
     alt: string
