@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { ArrowLeftIcon, ArrowUpRightIcon } from "@heroicons/react/16/solid"
+import { ArrowUpRightIcon } from "@heroicons/react/16/solid"
 import Button from "@/components/core/Button"
 
 const ResumePage = () => {
@@ -32,7 +32,7 @@ const ResumePage = () => {
             <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
               <div className="text-center">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent-primary mx-auto mb-4"></div>
-                <p className="text-gray-600">Loading resume...</p>
+                <p className="font-display text-white">Loading resume...</p>
               </div>
             </div>
           )}

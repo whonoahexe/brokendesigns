@@ -44,9 +44,9 @@ const Page = () => {
           {`👀 Oh Hello! I'm Karthikeyan (Noah, alter ego), an enthusiastic self-taught motion, graphic, web designer & developer.`}
         </p>
 
-        <div className="flex flex-col items-center text-center mt-16 mb-16">
-          <h2 className="font-display text-4xl text-white mb-8">Looking to hire me as a developer?</h2>
-          <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col items-center text-left md:text-center mt-16 mb-16">
+          <h2 className="font-display text-2xl md:text-4xl text-white mb-8">Looking to hire me as a developer?</h2>
+          <div className="flex w-full md:w-auto sm:flex-row gap-4">
             <Link href="/resume">
               <Button
                 className="px-12"
@@ -87,6 +87,14 @@ const Page = () => {
               </Link>
             )
           })}
+        </div>
+
+        <div className="block md:hidden">
+          <Link href="/motion">
+            <p className="font-display text-white text-lg hover:text-gray-hover transition-all duration-150 ease-in-out-def">
+              see more →
+            </p>
+          </Link>
         </div>
 
         <div className="grid grid-cols-12 gap-6 h-full">
