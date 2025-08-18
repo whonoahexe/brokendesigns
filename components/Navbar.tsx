@@ -4,7 +4,7 @@ import { useRef, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import Lottie, { LottieRefCurrentProps } from "lottie-react"
+import dynamic from "next/dynamic"
 
 import { getFirstWordLowercase } from "@/utils"
 import logo from "@/public/brand.svg"
@@ -16,7 +16,9 @@ const Navbar = () => {
   const router = useRouter()
   const pathname = usePathname()
 
-  const lottieRef = useRef<LottieRefCurrentProps | null>(null)
+  // dynamically load Lottie on client only to avoid server-side document access
+  const Lottie = dynamic(() => import("lottie-react"), { ssr: false })
+  const lottieRef = useRef<any | null>(null)
   const [sidebarActive, setSidebarActive] = useState(false)
 
   const allFields = Array.from(new Set(Works.map((work) => work.field)))

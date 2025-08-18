@@ -9,11 +9,21 @@ export const NavigationEvents = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
-  try {
-    nProgress.configure({ showSpinner: false })
-    nProgress.start()
-  } catch (error) {}
+  // configure and start progress bar only on client mount
+  useEffect(() => {
+    try {
+      nProgress.configure({ showSpinner: false })
+      nProgress.start()
+    } catch (error) {}
 
+    return () => {
+      try {
+        nProgress.done()
+      } catch (error) {}
+    }
+  }, [])
+
+  // mark progress done on navigation changes
   useEffect(() => {
     try {
       nProgress.done()
