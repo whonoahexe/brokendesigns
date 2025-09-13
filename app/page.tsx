@@ -41,7 +41,7 @@ const Page = () => {
           <p className="font-display text-7xl text-white">BRKN.</p>
         </div>
         <p className="font-display text-xl text-white mt-12 md:mt-0">
-          {`👀 Oh Hello! I'm Noah, an enthusiastic self-taught motion, graphic, web designer & developer.`}
+          {`👀 Oh Hello! I'm Karthikeyan (Noah, alter ego), an enthusiastic self-taught motion, graphic, web designer & developer.`}
         </p>
 
         <div className="flex flex-col items-center text-left md:text-center mt-16 mb-16">
