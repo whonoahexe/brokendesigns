@@ -9,25 +9,34 @@ export const NavigationEvents = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
-  // configure and start progress bar only on client mount
+  // configure nProgress once on mount
   useEffect(() => {
-    try {
-      nProgress.configure({ showSpinner: false })
-      nProgress.start()
-    } catch (error) {}
-
-    return () => {
-      try {
-        nProgress.done()
-      } catch (error) {}
-    }
+    nProgress.configure({ showSpinner: false })
   }, [])
 
-  // mark progress done on navigation changes
+  // start progress bar when an internal link is clicked
   useEffect(() => {
-    try {
-      nProgress.done()
-    } catch (error) {}
+    const handleLinkClick = (e: MouseEvent) => {
+      const anchor = (e.target as HTMLElement).closest("a")
+      if (
+        anchor &&
+        anchor.href &&
+        !anchor.target &&
+        anchor.href.startsWith(window.location.origin) &&
+        !anchor.href.startsWith("mailto:") &&
+        anchor.href !== window.location.href
+      ) {
+        nProgress.start()
+      }
+    }
+
+    document.addEventListener("click", handleLinkClick)
+    return () => document.removeEventListener("click", handleLinkClick)
+  }, [])
+
+  // mark progress done when navigation completes
+  useEffect(() => {
+    nProgress.done()
   }, [pathname, searchParams])
 
   return null

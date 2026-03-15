@@ -12,12 +12,12 @@ import Data from "@/public/data.json"
 import Works from "@/components/WorkData"
 import Button from "@/components/core/Button"
 
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false })
+
 const Navbar = () => {
   const router = useRouter()
   const pathname = usePathname()
 
-  // dynamically load Lottie on client only to avoid server-side document access
-  const Lottie = dynamic(() => import("lottie-react"), { ssr: false })
   const lottieRef = useRef<any | null>(null)
   const [sidebarActive, setSidebarActive] = useState(false)
 
