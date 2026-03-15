@@ -30,34 +30,36 @@ const Page = ({ params }: PageProps) => {
     <div className="container w-full max-w-[98%] md:max-w-[92%] px-6 md:px-12 mx-auto mt-40 md:mt-52">
       {card && (
         <>
+          {/* Title + description at top */}
+          <div className="flex flex-col mt-16 mb-10">
+            <p className="font-display text-[36px] md:text-[45px] tracking-tight text-white leading-tight">
+              {card.title}
+            </p>
+            <p className="text-[18px] text-white opacity-60 mt-2">{card.description}</p>
+          </div>
+
+          {/* Images */}
           {(() => {
             const images = [card.showImg, card.showImg2, card.showImg3, card.showImg4].filter(Boolean)
             const isApp = card.category === "App"
 
             return (
-              <div className={`${isApp ? "grid grid-cols-1 md:grid-cols-2 gap-6" : "flex flex-col"} mt-16`}>
+              <div className={`grid gap-4 ${isApp ? "grid-cols-2 md:grid-cols-4" : "grid-cols-1 md:grid-cols-2"}`}>
                 {images.map((img, index) => (
                   <div
                     key={index}
-                    className={`w-full aspect-auto bg-black-tertiary rounded-[22px] ${!isApp && index > 0 ? "mt-16" : ""}`}
+                    className={`w-full bg-black-tertiary rounded-[22px] overflow-hidden ${isApp ? "aspect-[9/19]" : "aspect-video"}`}
                   >
                     <img
                       src={`/${img}`}
                       alt={`${card.title} - Image ${index + 1}`}
-                      className="w-full h-full object-cover rounded-[22px]"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 ))}
               </div>
             )
           })()}
-
-          <div className="flex flex-col mt-6">
-            <p className="text-[45px] text-white">
-              <span className="font-display tracking-tight">{card.title}</span>
-            </p>
-            <p className="text-[18px] text-white">{card.description}</p>
-          </div>
         </>
       )}
     </div>

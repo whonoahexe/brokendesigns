@@ -9,7 +9,7 @@ const WorkCard = ({ src, alt, desc, cols, field, onClick, className }: WorkCardP
     <div className={`flex flex-col gap-6 ${colsClass} ${className}`}>
       <Link
         href={`${getFirstWordLowercase(field)}/${titleToSlug(alt)}`}
-        className="w-full h-[415px] bg-black-tertiary rounded-[22px] cursor-pointer"
+        className="w-full h-[260px] md:h-[415px] bg-black-tertiary rounded-[22px] cursor-pointer"
         onClick={onClick}
       >
         <img
