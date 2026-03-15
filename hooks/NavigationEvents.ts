@@ -34,9 +34,10 @@ export const NavigationEvents = () => {
     return () => document.removeEventListener("click", handleLinkClick)
   }, [])
 
-  // mark progress done when navigation completes
+  // mark progress done and reset scroll when navigation completes
   useEffect(() => {
     nProgress.done()
+    window.scrollTo(0, 0)
   }, [pathname, searchParams])
 
   return null
